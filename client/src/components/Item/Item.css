@@ -1,0 +1,46 @@
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.item .meal {
+  flex: 1;
+}
+
+.item .meal span {
+  font-size: var(--text-size) !important;
+  text-decoration: none !important;
+  text-transform: capitalize;
+}
+
+.item .meal .sizes {
+  display: flex;
+  gap: 6px;
+}
+
+.item .meal .sizes span {
+  font-size: var(--text-md) !important;
+  cursor: pointer;
+}
+
+.item .meal .sizes span.active {
+  font-weight: 700;
+  text-decoration: underline !important;
+}
+
+.item .quantity {
+  display: flex;
+  gap: 6px;
+}
+
+.item .quantity .icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--icon-size);
+  padding: 4px;
+  cursor: pointer;
+}

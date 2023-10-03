@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  top: 0;
+  background-color: var(--bg-dark);
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  height: 100%;
+  width: 100vw;
+  margin-top: 0;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 3;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.modal.hide {
+  margin-top: -200%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal .exit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--light-text);
+  border-radius: 50%;
+  font-size: var(--title-size);
+  cursor: pointer;
+}
+
+.modal .children {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}

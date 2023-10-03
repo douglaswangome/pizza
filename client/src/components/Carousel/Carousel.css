@@ -1,0 +1,247 @@
+.carousel {
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+.carousel .body {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel .body .contents {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  min-height: 100%;
+  padding-bottom: 5px;
+}
+
+.carousel .body .img {
+  overflow: hidden;
+}
+
+.base-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: spinner 30s infinite linear;
+}
+
+.carousel .body .contents .pizza {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  width: fit-content;
+}
+
+.carousel .body .contents .pizza div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-transform: capitalize;
+  font-size: var(--text-size);
+}
+
+.carousel .body .contents .pizza div span::before {
+  content: "~";
+}
+
+.carousel .body .contents .price {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  margin: auto auto 0 0;
+}
+
+.carousel .body .contents .price div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-transform: capitalize;
+  font-size: var(--text-size);
+}
+
+.carousel .body .contents .table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.carousel .body .contents .table .table-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.carousel .body .contents .table .table-content {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+  font-size: var(--text-size);
+}
+
+.carousel .body .contents .button {
+  margin: auto 0 6px auto;
+  height: fit-content;
+  width: fit-content;
+} 
+
+.carousel .body .contents .button button {
+  margin: auto 0 0 auto;
+  border: none;
+  border: 1px solid var(--light-text);
+  background-color: transparent;
+  color: var(--light-text);
+  border-radius: 12px;
+  font-family: var(--text-font);
+  font-size: var(--button-size);
+  padding: 12px;
+  text-transform: none !important;
+  cursor: pointer;
+  transition: transform .4s ease-in-out;
+}
+
+.carousel .body .contents button:hover {
+  transform: scale(0.98);
+}
+
+.swiper-pagination span {
+  background: var(--main-yellow) !important;
+  opacity: 1;
+  transition: transform .2s ease-in-out;
+}
+
+.swiper-pagination span:nth-child(3n-1) {
+  background: var(--main-green) !important;
+}
+
+.swiper-pagination span:nth-child(3n+0) {
+  background: var(--main-red) !important;
+}
+
+.swiper-pagination-bullet-active {
+  transform: scale(1.35);
+}
+
+.swiper-pagination span:hover {
+  transform: scale(1.5);
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .base-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spinner-900 30s infinite linear;
+  }
+
+  @keyframes spinner-900 {
+    0% {
+      transform: translate(-28%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-28%, -50%) rotate(360deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .carousel {
+    height: 100% !important;
+  }
+
+  .carousel .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    height: 100% !important;
+  }
+
+  .carousel .body .img {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 12px;
+    flex: 1;
+  }
+
+  .base-img {
+    position: relative;
+    z-index: 389798376987;
+    top: 0;
+    left: 0;
+    animation: spinner-700 30s infinite linear;
+  }
+
+  .carousel .body .contents {
+    height: fit-content !important;
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .carousel .body .contents .pizza, .carousel .body .contents .table, .carousel .body .contents .price {
+    margin: 0;
+    width: 100%;
+  }
+
+  .carousel .body .contents .table .table-content {
+    margin-left: 0;
+  }
+
+  .carousel .body .contents .button {
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    width: 100%;
+  }
+
+  .carousel .body .contents .button button {
+    margin: 0;
+  }
+
+  @keyframes spinner-700 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .carousel .body .img img {
+    max-width: 98%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .carousel .body .contents {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .carousel .body .contents .button {
+    justify-content: center;
+  }
+
+  .carousel .body .contents .button button {
+    width: 90%;
+  }
+}

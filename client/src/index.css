@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mooli&family=Sofia&display=swap');
+:root {
+  font-family: "Mooli";
+  --modal-font: "Sofia";
+  --sec-font: "Dancing Script";
+  --text-font: "Mooli";
+
+  /* Colors */
+  --bg-dark: #212121;
+  --main-dark: #424242;
+  /* Text */
+  --light-text: #fff;
+
+  /* Yellow */
+  --light-yellow: #F8FF1A;
+  --neutral-yellow: #C6CC14;
+  --main-yellow: #C8CC52;
+  --dark-yellow: #7D8033;
+  
+  /* Green */
+  --light-green: #02CC7B;
+  --neutral-green: #2E956C;
+  --main-green: #017F4D;
+  --dark-green: #014D2E;
+
+  /* Red */
+  --light-red: #DD5B63;
+  --neutral-red: #A3121C;
+  --main-red: #8A0F17;
+  --dark-red: #570A0F;
+
+  /* Sizes */
+  --modal-title: 48px;
+  --title-size: 28px;
+  --text-lg: 24px;
+  --button-size: 20px;
+  --text-size: 20px;
+  --text-md: 14px;
+  --icon-size: 20px;
+  --icon-padding: 10px;
+}
+
+.h-line {
+  background-color: var(--light-text);
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.main-dark {background-color: var(--main-dark) ;}
+.classic-light { background-color: var(--light-yellow); }
+.classic-neutral { background-color: var(--neutral-yellow); }
+.classic-main { background-color: var(--main-yellow); }
+.classic-dark { background-color: var(--dark-yellow); }
+.deluxe-light { background-color: var(--light-green); }
+.deluxe-neutral { background-color: var(--neutral-green); }
+.deluxe-main { background-color: var(--main-green); }
+.deluxe-dark { background-color: var(--dark-green); }
+.supreme-light { background-color: var(--light-red); }
+.supreme-neutral { background-color: var(--neutral-red); }
+.supreme-main { background-color: var(--main-red); }
+.supreme-dark { background-color: var(--dark-red); }
+
+.title {
+  font-family: "Dancing Script";
+  font-size: var(--title-size);
+  text-transform: uppercase;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--main-dark);
+  color: var(--light-text);
+  font-family: var(--text-font);
+  font-size: calc(var(--text-size) - 2px);
+  padding: 6px 2px;
+  transition: background-color .4s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  background-color: var(--main-dark);
+}

@@ -1,0 +1,8 @@
+.row span {
+  cursor: pointer;
+}
+
+.row span.included {
+  font-style: italic;
+  text-decoration: line-through !important;
+}

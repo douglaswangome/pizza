@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 6px;
+}
+
+.about .title {
+  backdrop-filter: blur(0);
+  font-family: var(--modal-font);
+  font-size: var(--modal-title);
+  text-transform: capitalize;
+}
+
+.about .content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: justify;
+  font-size: var(--text-size);
+}

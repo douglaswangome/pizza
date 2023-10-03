@@ -1,0 +1,107 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.auth img {
+  width: 300px;
+  object-fit: contain;
+}
+
+.auth .all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 12px;
+  border: 1px solid var(--main-dark);
+  border-radius: 12px;
+}
+
+.auth .all .titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.auth .all .titles .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4px 0;
+  text-transform: capitalize;
+  transition: background-color .4s ease-in-out;
+}
+
+.auth .all .titles .title.active {
+  background-color: var(--main-dark);
+}
+
+.auth .all .content {
+  width: 100%;
+}
+
+.auth .all .content .login, .auth .all .content .register {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.auth .all .content .login div, .auth .all .content .register div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+}
+
+.auth .all .content .login button, .auth .all .content .register button {
+  margin: 12px 0;
+  cursor: default;
+}
+
+.auth .all .google {
+  width: 100%;
+}
+
+.auth .all .content .login button, .auth .all .content .register button, .auth .all .google button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 6px auto;
+  border: none;
+  border: 1px solid var(--main-dark);
+  background-color: transparent;
+  color: var(--light-text);
+  border-radius: 12px;
+  width: 100%;
+  font-family: var(--text-font);
+  font-size: calc(var(--button-size) - 4px);
+  padding: 8px;
+  text-transform: none !important;
+  cursor: pointer;
+  transition: background-color .4s ease-in-out;
+}
+
+.auth .all .google button img {
+  width: 25px;
+  object-fit: contain;
+}
+
+.auth .all .content .login button:hover, .auth .all .content .register button:hover, .auth .all .google button:hover {
+  background-color: var(--main-dark);
+}
+
+.auth .all .h-line {
+  background-color: var(--main-dark);
+  margin: 8px 0;
+}

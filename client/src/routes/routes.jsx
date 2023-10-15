@@ -14,6 +14,7 @@ const routes = createBrowserRouter([
   { path: "/order_online", element: <Order /> },
   { path: "/authentication", element: <Auth /> },
   { path: "/profile/:id", element: <Profile /> },
+  // Add forgot password page
 ]);
 
 export default routes;

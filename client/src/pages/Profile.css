@@ -1,0 +1,74 @@
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.user-profile .name {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 300px;
+}
+
+.user-profile .name .avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-dark);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  height: 50px;
+  width: 50px;
+  padding: 30px;
+  gap: 1px;
+  margin: 0 auto;
+}
+
+.user-profile .name div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-profile .name div span.verified {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.user-profile .name div span.verified span {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  text-decoration: underline;
+}
+
+.user-profile button {
+  width: 100%;
+  border: none;
+  border: 1px solid var(--light-text);
+  background-color: transparent;
+  color: var(--light-text);
+  border-radius: 12px;
+  font-family: var(--text-font);
+  font-size: var(--text-md);
+  padding: 4px;
+  text-transform: none !important;
+  cursor: pointer;
+  transition: transform .4s ease-in-out;
+}
+
+.user-profile button.delete {
+  color: var(--neutral-red);
+  border: 1px solid var(--neutral-red);
+}

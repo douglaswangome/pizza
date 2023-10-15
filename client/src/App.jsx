@@ -4,14 +4,20 @@ import { RouterProvider } from "react-router-dom";
 import routes, { api } from "./routes/routes";
 import { custom } from "./utils/notify";
 import { useDispatch } from "react-redux";
-import { signIn, signOut } from "./table/slice";
+import { signIn, signUserOut } from "./table/slice";
 import { auth } from "./utils/firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const autoSignOut = () => {
+      setTimeout(() => {
+        signOut(auth);
+      }, 1000 * 60 * 60 * 4);
+    };
+
     const unsubscribe = onAuthStateChanged(auth, async (userCred) => {
       if (userCred) {
         let client = {
@@ -33,12 +39,13 @@ const App = () => {
           client = { ...client, _id, name, phone, role, pending };
 
           dispatch(signIn(client));
+          autoSignOut();
         } catch (error) {
-          dispatch(signOut());
+          dispatch(signUserOut());
           console.log(error);
         }
       } else {
-        dispatch(signOut());
+        dispatch(signUserOut());
       }
     });
 

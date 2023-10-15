@@ -9,6 +9,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { notify } from "../utils/notify";
 
@@ -23,6 +24,10 @@ const Auth = () => {
     });
   };
   const handleSignIn = () => {
+    if (signIn.email === "" || signIn.password === "") {
+      notify(500, "Please enter your email and password");
+      return;
+    }
     signInWithEmailAndPassword(auth, signIn.email, signIn.password)
       .then(() => notify(200, "Sign in successful"))
       .catch(() => notify(500, "Error signing in"));
@@ -44,6 +49,15 @@ const Auth = () => {
     });
   };
   const handleSignUp = () => {
+    if (
+      signUp.name === "" ||
+      signUp.email === "" ||
+      signUp.password === "" ||
+      signUp.confirmPassword === ""
+    ) {
+      notify(500, "Please fill all the fields");
+      return;
+    }
     createUserWithEmailAndPassword(auth, signUp.email, signUp.password)
       .then((userCred) => {
         sendEmailVerification(userCred.user);
@@ -54,6 +68,20 @@ const Auth = () => {
       })
       .catch((error) => {
         console.log(error.response);
+      });
+  };
+
+  const handleForgotPassword = () => {
+    if (signIn.email === "") {
+      notify(500, "Please enter your email address");
+      return;
+    }
+    sendPasswordResetEmail(auth, signIn.email)
+      .then(() => {
+        notify(200, "Email sent successfully");
+      })
+      .catch((error) => {
+        notify(500, "Error sending email, try again later!");
       });
   };
 
@@ -116,6 +144,9 @@ const Auth = () => {
                   type="password"
                 />
               </div>
+              <span className="forgot" onClick={handleForgotPassword}>
+                Forgot Password
+              </span>
               <button onClick={handleSignIn}>
                 <span>Sign In</span>
               </button>

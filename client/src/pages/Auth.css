@@ -68,6 +68,12 @@
   gap: 4px;
 }
 
+.auth .all .content .login .forgot {
+  cursor: pointer;
+  font-size: var(--text-md);
+  text-decoration: underline;
+}
+
 .auth .all .content .login button, .auth .all .content .register button {
   margin: 12px 0;
   cursor: default;

@@ -57,7 +57,7 @@ export const tableSlice = createSlice({
     signIn: (state, action) => {
       state.user = action.payload;
     },
-    signOut: (state) => {
+    signUserOut: (state) => {
       state.user = null;
     },
   },
@@ -70,7 +70,7 @@ export const {
   deleteFromTable,
   clearTable,
   signIn,
-  signOut,
+  signUserOut,
 } = tableSlice.actions;
 
 export default tableSlice.reducer;

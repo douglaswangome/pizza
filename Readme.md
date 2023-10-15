@@ -3,6 +3,5 @@
 
 ### What is remaining
 <ul>
-  <li>Profile page</li>
   <li>Admin panel</li>
 </ul>

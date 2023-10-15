@@ -1,0 +1,43 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: flex-start;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.not-found img {
+  animation: spinning 30s infinite linear;
+}
+
+.not-found .text {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-lg);
+}
+
+.not-found .text .link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .not-found img {
+    width: 60%;
+    object-fit: contain;
+  }
+
+  .not-found .text {
+    font-size: var(--text-md);
+  }
+}

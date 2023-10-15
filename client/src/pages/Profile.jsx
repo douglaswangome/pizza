@@ -4,7 +4,7 @@ import { BsCheckCircle, BsXCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { signUserOut } from "../table/slice";
 import { auth } from "../utils/firebase";
-import { signOut } from "firebase/auth";
+import { sendEmailVerification, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { notify } from "../utils/notify";
 
@@ -13,8 +13,10 @@ const Profile = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.table.user);
 
-  const handleDeleteAccount = () => {
-    // reauthenticateWithCredential
+  const handleVerifyEmail = () => {
+    sendEmailVerification(auth.currentUser)
+      .then(() => notify(200, "Email sent successfully"))
+      .catch(() => notify(500, "Error sending email."));
   };
 
   const handleSignOut = () => {
@@ -64,7 +66,7 @@ const Profile = () => {
                     <>
                       <BsXCircle />
                       Email Not Verified.
-                      <span>Verify here.</span>
+                      <span onClick={handleVerifyEmail}>Verify here.</span>
                     </>
                   )}
                 </span>
@@ -81,10 +83,6 @@ const Profile = () => {
             </div>
             <button onClick={handleSignOut}>
               <span>Sign Out</span>
-            </button>
-            <hr className="h-line" />
-            <button className="delete">
-              <span>Delete Account</span>
             </button>
           </>
         )}

@@ -5,6 +5,7 @@ import Order from "../pages/Order";
 import Auth from "../pages/Auth";
 import Profile from "../pages/Profile";
 import About from "../components/Modals/About";
+import NotFound from "../pages/404";
 
 export const api = axios.create({ baseURL: "https://localhost:5000/" });
 
@@ -14,6 +15,7 @@ const routes = createBrowserRouter([
   { path: "/order_online", element: <Order /> },
   { path: "/authentication", element: <Auth /> },
   { path: "/profile/:id", element: <Profile /> },
+  { path: "*", element: <NotFound /> },
   // Add forgot password page
 ]);
 

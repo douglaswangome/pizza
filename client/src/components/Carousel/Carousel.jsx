@@ -81,11 +81,11 @@ const Carousel = ({ category, setCategory }) => {
       modules={[Pagination, A11y, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
-      // autoplay={{
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      //   pauseOnMouseEnter: true,
-      // }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
       pagination={{ clickable: true }}
       onSlideChange={(swiper) => {
         handleCategoryColor(swiper.activeIndex);

@@ -1,5 +1,5 @@
 import "./Order.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Modal from "../components/Modal/Modal";

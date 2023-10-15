@@ -67,8 +67,3 @@
   cursor: pointer;
   transition: transform .4s ease-in-out;
 }
-
-.user-profile button.delete {
-  color: var(--neutral-red);
-  border: 1px solid var(--neutral-red);
-}

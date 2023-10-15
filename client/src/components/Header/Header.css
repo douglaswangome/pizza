@@ -54,7 +54,7 @@
 .header .menu .icon {
   position: absolute;
   inset: 0;
-  font-size: var(--title-size);
+  font-size: var(--text-size);
   opacity: 1;
   transition: opacity .2s ease-in-out;
 }
@@ -66,17 +66,31 @@
 
 @media only screen and (max-width: 600px) {
   .header .links {
-    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    box-shadow: 0 6px 6px -3px var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 6px;
+    margin: 0;
+    z-index: 2;
+    transition: margin-left .3s ease-in-out;
+  }
+
+  .header .links.hide {
+    margin-left: -100%;
+  }
+
+  .header .links.show {
+    margin-left: 0;
   }
 
   .header .menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform .5s ease-in-out;
-  }
-
-  .header .menu.hide {
-    transform: rotate(180deg);
   }
 }

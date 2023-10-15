@@ -33,7 +33,17 @@ const Header = ({ category = "", page = "" }) => {
         src="/images/pizza-logo.png"
         alt="logo"
       />
-      <div className="links">
+      <div
+        className={`links ${showMenu ? "show" : "hide"} ${
+          category === "classic"
+            ? "classic-dark"
+            : category === "deluxe"
+            ? "deluxe-dark"
+            : category === "supreme"
+            ? "supreme-dark"
+            : ""
+        }`}
+      >
         <Link to="/" className="link">
           <span>Home</span>
           <hr className="h-line" />

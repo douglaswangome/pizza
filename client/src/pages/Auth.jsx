@@ -1,6 +1,16 @@
 import "./Auth.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { auth } from "../utils/firebase";
+import { api } from "../routes/routes";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { notify } from "../utils/notify";
 
 const Auth = () => {
   const [login, setLogin] = useState(true);
@@ -11,6 +21,11 @@ const Auth = () => {
     setSignIn((prevSignIn) => {
       return { ...prevSignIn, [name]: value };
     });
+  };
+  const handleSignIn = () => {
+    signInWithEmailAndPassword(auth, signIn.email, signIn.password)
+      .then(() => notify(200, "Sign in successful"))
+      .catch(() => notify(500, "Error signing in"));
   };
 
   const [signUp, setSignUp] = useState({
@@ -27,6 +42,37 @@ const Auth = () => {
         [name]: value,
       };
     });
+  };
+  const handleSignUp = () => {
+    createUserWithEmailAndPassword(auth, signUp.email, signUp.password)
+      .then((userCred) => {
+        sendEmailVerification(userCred.user);
+        const user = { name: signUp.name, email: signUp.email };
+        api
+          .post("/users/add", { user })
+          .then((res) => notify(res.status, res.data.message));
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  };
+
+  const handleGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((userCred) => {
+        const client = {
+          name: userCred.user.displayName,
+          email: userCred.user.email,
+        };
+        api
+          .post("/users/add", { user: client })
+          .then((res) => notify(res.status, res.data.message))
+          .catch((error) => console.log(error));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -70,7 +116,7 @@ const Auth = () => {
                   type="password"
                 />
               </div>
-              <button>
+              <button onClick={handleSignIn}>
                 <span>Sign In</span>
               </button>
             </div>
@@ -112,7 +158,7 @@ const Auth = () => {
                   type="password"
                 />
               </div>
-              <button>
+              <button onClick={handleSignUp}>
                 <span>Sign Up</span>
               </button>
             </div>
@@ -120,7 +166,7 @@ const Auth = () => {
         </div>
         <hr className="h-line" />
         <div className="google">
-          <button>
+          <button onClick={handleGoogle}>
             <img src="/images/google.png" alt="google" />
             <span>Continue with Google</span>
           </button>

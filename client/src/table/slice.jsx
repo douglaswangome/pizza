@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   table: [],
   total: 0,
+  user: null,
 };
 
 export const tableSlice = createSlice({
@@ -49,10 +50,27 @@ export const tableSlice = createSlice({
         state.table = state.table.filter((item) => item.title !== title);
       }
     },
+    clearTable: (state) => {
+      state.table = [];
+      state.total = 0;
+    },
+    signIn: (state, action) => {
+      state.user = action.payload;
+    },
+    signOut: (state) => {
+      state.user = null;
+    },
   },
 });
 
-export const { addToTable, updateQuantity, updateSize, deleteFromTable } =
-  tableSlice.actions;
+export const {
+  addToTable,
+  updateQuantity,
+  updateSize,
+  deleteFromTable,
+  clearTable,
+  signIn,
+  signOut,
+} = tableSlice.actions;
 
 export default tableSlice.reducer;

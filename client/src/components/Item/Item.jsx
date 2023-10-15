@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import "./Item.css";
 import { BsDash, BsPlus, BsTrash } from "react-icons/bs";
 import { updateQuantity, updateSize, deleteFromTable } from "../../table/slice";
-import { prices } from "../../utils/offline";
+import { prices } from "../../utils/json/offline.json";
 
 const Item = ({ category, title, size = "", quantity }) => {
   const dispatch = useDispatch();

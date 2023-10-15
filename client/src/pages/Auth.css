@@ -38,6 +38,7 @@
   padding: 4px 0;
   text-transform: capitalize;
   transition: background-color .4s ease-in-out;
+  cursor: pointer;
 }
 
 .auth .all .titles .title.active {
@@ -54,6 +55,10 @@
   gap: 6px;
   width: 100%;
   margin-bottom: 4px;
+}
+
+.auth .all .content .register div:first-child input {
+  text-transform: capitalize;
 }
 
 .auth .all .content .login div, .auth .all .content .register div {

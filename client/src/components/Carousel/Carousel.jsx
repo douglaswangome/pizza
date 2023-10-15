@@ -6,10 +6,11 @@ import "swiper/css/bundle";
 
 import "./Carousel.css";
 import { useEffect, useState } from "react";
-import { pizzas, prices } from "../../utils/offline";
+import { pizzas, prices } from "../../utils/json/offline.json";
 import { MdTableRestaurant } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { addToTable } from "../../table/slice";
+import { notify } from "../../utils/notify";
 
 const Carousel = ({ category, setCategory }) => {
   const dispatch = useDispatch();
@@ -24,6 +25,11 @@ const Carousel = ({ category, setCategory }) => {
     item.title = pizza.title;
 
     dispatch(addToTable(item));
+    const capitalizedTitle = pizza.title
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+    notify(200, `1 Large ${capitalizedTitle} Pizza added`);
   };
 
   const [index, setIndex] = useState(0);

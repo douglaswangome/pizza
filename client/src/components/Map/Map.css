@@ -1,0 +1,17 @@
+
+.leaflet-container {
+  height: 200px;
+  width: 200px
+}
+
+.leaflet-control-zoom {
+  display: none !important;
+}
+
+.leaflet-bottom {
+  display: none !important;
+}
+
+.leaflet-popup-container-wrapper {
+  width: 20%;
+}

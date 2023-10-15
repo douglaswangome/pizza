@@ -1,7 +1,8 @@
 import "./Row.css";
-import { extras, prices } from "../../utils/offline";
+import { extras, prices } from "../../utils/json/offline.json";
 import { useDispatch } from "react-redux";
 import { addToTable, deleteFromTable } from "../../table/slice";
+import { notify } from "../../utils/notify";
 
 const Row = ({ extra = null, included = false, pizza = null }) => {
   const dispatch = useDispatch();
@@ -15,6 +16,11 @@ const Row = ({ extra = null, included = false, pizza = null }) => {
         });
 
         dispatch(addToTable(item));
+        const capitalizedTitle = item.title
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+        notify(200, `1 ${capitalizedTitle} added`);
       } else {
         dispatch(deleteFromTable({ title: extra.title }));
       }
@@ -28,6 +34,11 @@ const Row = ({ extra = null, included = false, pizza = null }) => {
         item.title = pizza.title;
 
         dispatch(addToTable(item));
+        const capitalizedTitle = pizza.title
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+        notify(200, `1 Large ${capitalizedTitle} Pizza added`);
       } else {
         dispatch(deleteFromTable({ title: pizza.title }));
       }

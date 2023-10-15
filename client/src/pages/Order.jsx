@@ -1,26 +1,51 @@
 import "./Order.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Modal from "../components/Modal/Modal";
-import { extras, pizzas } from "../utils/offline";
+import { extras, pizzas } from "../utils/json/offline.json";
 import Item from "../components/Item/Item";
 import Row from "../components/Row/Row";
 import { useSelector } from "react-redux";
 import Place from "../components/Modals/Place";
+import { notify } from "../utils/notify";
 
 const Order = () => {
-  const [confirm, setConfirm] = useState(false);
+  const [count, setCount] = useState(1);
   const [showConfirm, setShowConfirm] = useState(false);
+
   const orders = useSelector((state) => state.table.table) || [];
   const total = useSelector((state) => state.table.total);
+  const user = useSelector((state) => state.table.user);
+
+  const handleConfirm = () => {
+    if (orders.length === 0) {
+      notify(500, "Cannot place an empty order");
+    } else if (user._id === "" || user === null) {
+      notify(500, "Sign in to place an order");
+    } else {
+      setCount(count + 1);
+      if (count < 2) {
+        notify("", "Confirm your order and click the button again to order");
+      } else {
+        setShowConfirm(true);
+        setCount(1);
+      }
+    }
+  };
 
   return (
     <div className="order">
-      <Modal show={showConfirm} setShow={setShowConfirm}>
-        <Place orders={orders} total={total} />
-      </Modal>
-      <Header category="" page="order" />
+      {showConfirm && (
+        <Modal show={showConfirm} setShow={setShowConfirm}>
+          <Place
+            orders={orders}
+            total={total}
+            hideModal={() => setShowConfirm(false)}
+          />
+        </Modal>
+      )}
+      <Header page="order" />
       <div className="content">
         <div className="menu">
           <div>
@@ -95,17 +120,14 @@ const Order = () => {
               <span>{total.toLocaleString()}</span>
             </div>
             <div className="confirm">
-              <div className="check" onClick={() => setConfirm(!confirm)}>
-                <div className={`full ${confirm ? "active" : ""}`}></div>
-              </div>
-              <button onClick={() => setShowConfirm(!showConfirm)}>
+              <button onClick={handleConfirm}>
                 <span>Place Order</span>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <Footer category="" page="order" />
+      <Footer page="order" />
     </div>
   );
 };

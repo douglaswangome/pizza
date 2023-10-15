@@ -1,11 +1,12 @@
 .modal {
   position: fixed;
   top: 0;
+  left: 0;
   background-color: var(--bg-dark);
   display: grid;
   place-items: center;
   padding: 10px;
-  height: 100%;
+  height: calc(100vh + 160px);
   width: 100vw;
   margin-top: 0;
   opacity: 1;
@@ -37,4 +38,6 @@
   display: grid;
   place-items: center;
   height: 100%;
+  width: 100%;
+  margin-top: -160px;
 }

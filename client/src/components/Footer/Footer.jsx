@@ -7,7 +7,7 @@ import {
   BsGooglePlay,
 } from "react-icons/bs";
 
-const Footer = ({ category }) => {
+const Footer = ({ category = "" }) => {
   return (
     <div
       className={`footer ${

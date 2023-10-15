@@ -1,4 +1,127 @@
 .place {
-  background-color: var(--bg-dark);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 2px;
   width: 100%;
+}
+
+.place .inputs, .place .transaction {
+  border: 1px solid var(--main-dark);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  gap: 8px;
+  width: 100% !important;
+}
+
+.place .inputs div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.place .inputs div:nth-child(3) div {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.place .inputs button {
+  border: none;
+  border: 1px solid var(--main-dark);
+  background-color: transparent;
+  color: var(--light-text);
+  border-radius: 8px;
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  padding: 4px;
+  text-transform: none !important;
+  cursor: pointer;
+  transition: transform .4s ease-in-out;
+  width: 100%;
+}
+
+.place .inputs  button:hover {
+  transform: scale(0.98);
+}
+
+.place .transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.place .transaction .transaction-title {
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  font-weight: 600;
+  color: var(--light-text);
+  margin: 0 auto;
+}
+
+.place .transaction .total {
+  display: flex;
+  gap: 4px;
+  font-family: var(--text-font);
+  font-size: var(--text-lg);
+  color: var(--light-text);
+}
+
+.place .transaction .info, .place .transaction .order {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-size);
+  width: 100%;
+  height: fit-content;
+  border: 1px solid var(--main-dark);
+  border-radius: 12px;
+  gap: 4px;
+  padding: 4px;
+}
+
+.place .transaction div .title {
+  font-family: var(--text-font);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.place .transaction div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+@media only screen and (max-width: 850px) {
+  .place {
+    flex-direction: column;
+  }
+
+  .place .inputs {
+    margin-top: 120px;
+  }
+}
+
+/* Loader */
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--main-green) 94%,#0000) top/9px 9px no-repeat,
+        conic-gradient(#0000 30%, var(--main-green));
+  mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(1turn);
+  }
 }

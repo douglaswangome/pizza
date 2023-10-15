@@ -74,7 +74,7 @@ input {
   color: var(--light-text);
   font-family: var(--text-font);
   font-size: calc(var(--text-size) - 2px);
-  padding: 6px 2px;
+  padding: 6px;
   transition: background-color .4s ease-in-out;
 }
 

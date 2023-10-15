@@ -88,30 +88,6 @@
   gap: 4px;
 }
 
-.order .content .confirm .check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--light-text);
-  border-radius: 50%;
-  height: 16px;
-  width: 16px;
-  cursor: pointer;
-}
-
-.order .content .confirm .check .full {
-  background-color: var(--light-text);
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-}
-
-.order .content .confirm .check .full.active {
-  opacity: 1;
-}
-
 .order .content .confirm button {
   border: none;
   border: 1px solid var(--light-text);

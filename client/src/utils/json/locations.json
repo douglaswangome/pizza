@@ -1,0 +1,345 @@
+{
+  "locations": [
+    {
+      "name":"Pizza Inn 680",
+      "lat":-1.282344089177693,
+      "lon":36.82994456556722,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Airport North Road",
+      "lat":-1.325636154646077,
+      "lon":36.897993149617825,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ananas Mall",
+      "lat":-1.0512000231269814,
+      "lon":37.12041244961784,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Bamburi",
+      "lat":-1.3362040502821482,
+      "lon":36.77702734475599,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Buruburu",
+      "lat":-1.2891485170184236,
+      "lon":36.876460378422244,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Capital Center",
+      "lat":-1.3076621381390972,
+      "lon":36.834903462674625,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Delta Ruiru",
+      "lat":-1.1646502546652897,
+      "lon":36.972108838072536,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Donholm Mall",
+      "lat":-1.2835503844459857,
+      "lon":36.91392716751616,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Enterprise Road",
+      "lat":-1.2976944004521385,
+      "lon":36.838864519781545,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Garden City",
+      "lat":-1.2324096458734286,
+      "lon":36.88050021025762,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Gigiri",
+      "lat":-1.2326506264033057,
+      "lon":36.81576093169916,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Greenpark",
+      "lat":-1.4543319673885933,
+      "lon":37.021151008194984,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Greenspan",
+      "lat":-1.285065566551441,
+      "lon":36.91250817647549,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Jacaranda Estate",
+      "lat":-1.1866879816715552,
+      "lon":36.900380590296656,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Junction Mall",
+      "lat":-1.2971409348929652,
+      "lon":36.763381729989305,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Hombre Road",
+      "lat":-1.2667489121873583,
+      "lon":36.84034327235766,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Imaara Mall",
+      "lat":-1.3200754370014813,
+      "lon":36.88057915977989,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kahawa Sukari",
+      "lat":-1.1861923591633063,
+      "lon":36.9344080061564,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kangundo Road",
+      "lat":-1.2705926668725078,
+      "lon":36.89086507258195,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kasarani",
+      "lat":-1.2177116439344853,
+      "lon":36.89629767167378,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kiambu Mall",
+      "lat":-1.1625181364560233,
+      "lon":36.835360591020354,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kitengela",
+      "lat":-1.4648239028539665,
+      "lon":36.9573137941637,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kilimani",
+      "lat":-1.2856189370254894,
+      "lon":36.785255416206326,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kobil Embakasi",
+      "lat":-1.3217557120374175,
+      "lon":36.88916332054845,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kobil Langata",
+      "lat":-1.317959116996325,
+      "lon":36.80228780045869,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kobil Makutano",
+      "lat":-0.936065723972149,
+      "lon":37.1352613068801,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Kobil South B",
+      "lat":-1.3003780561064746,
+      "lon":36.85323332271951,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Limuru Road",
+      "lat":-1.2581679269686181,
+      "lon":36.83725336751615,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Magadi Road",
+      "lat":-1.390776908633296,
+      "lon":36.764667725389955,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Milele Mall",
+      "lat":-1.3547143214453223,
+      "lon":36.662685404097495,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Moi Avenue",
+      "lat":-1.279173610881755,
+      "lon":36.82391713434927,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Mombasa Road",
+      "lat":-1.3114587488392306,
+      "lon":36.83835155204363,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Mountain View Mall",
+      "lat":-1.2618414268857674,
+      "lon":36.74623504271741,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ojijo Road",
+      "lat":-1.2663066883496732, 
+      "lon":36.811692038948635,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ola Bellevue",
+      "lat":-1.3103398741980101,
+      "lon":36.86609247937023,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ola Forest Edge",
+      "lat":-1.3394162130108045,
+      "lon":36.7695290040975,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ola Ngong Road",
+      "lat":-1.2935087384655746,
+      "lon":36.79315983023147,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ola Westlands",
+      "lat":-1.2578246869714986,
+      "lon":36.795367990775695,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ola Parklands",
+      "lat":-1.26146672433042,
+      "lon":36.835336691020345,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Ridgeways",
+      "lat":-1.222787244892141,
+      "lon":36.84141153097549,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Rubis Valley Arcade",
+      "lat":-1.2894230927747492,
+      "lon":36.77597298133733,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Shell High View",
+      "lat":-1.3071385362376913,
+      "lon":36.80431646419928,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Shell Mirema",
+      "lat":-1.2108400555900547,
+      "lon":36.90178425445935,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Shell St. Austin",
+      "lat":-1.2802461495550015,
+      "lon":36.77130663843391,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Syokimau",
+      "lat":-1.3495572984591384,
+      "lon":36.91800243240253,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn T Mall",
+      "lat":-1.312109918334187,
+      "lon":36.81640350825859,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Thika Bazaar",
+      "lat":-1.0371179016476975,
+      "lon":37.081090931699165,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Thika Road Mall",
+      "lat":-1.211434563392614,
+      "lon":36.89163298471113,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Thika Town",
+      "lat":-1.0349809681617448,
+      "lon":37.088696804097495,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Total Sabaki",
+      "lat":-1.4124596999623062,
+      "lon":36.956263006523294,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Two Rivers Mall",
+      "lat":-1.2079152606421952,
+      "lon":36.80255012479875,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Union Towers",
+      "lat":-1.2828810873134286,
+      "lon":36.82249048882895,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Utawala",
+      "lat":-1.272545639618729,
+      "lon":36.97434373821893,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Valley Arcade",
+      "lat":-1.2891273926550904,
+      "lon":36.77126372308889,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Waiyaki Way",
+      "lat":-1.2566125800119803,
+      "lon":36.782308722016154,
+      "till_no":174379
+    },
+    {
+      "name":"Pizza Inn Westgate Mall",
+      "lat":-1.2556717742744021,
+      "lon":36.802684838948636,
+      "till_no":174379
+    }, {
+      "name":"Pizza Inn Sigoma",
+      "lat":-1.222551734181379,
+      "lon":36.673235499979675,
+      "till_no":174379
+    }
+  ]
+}
